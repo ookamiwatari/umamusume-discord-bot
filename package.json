@@ -1,0 +1,30 @@
+{
+  "name": "umamusume-discord-bot",
+  "version": "0.0.0",
+  "main": "server.js",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ookamiwatari/umamusume-discord-bot.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/ookamiwatari/umamusume-discord-bot/issues"
+  },
+  "homepage": "https://github.com/ookamiwatari/umamusume-discord-bot",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "discord.js-commando": "github:discordjs/Commando",
+    "discord-paginationembed": "^2.1.0",
+    "express": "^4.17.1",
+    "ggscript": "^0.1.0",
+    "querystring": "^0.2.0"
+  }
+}
