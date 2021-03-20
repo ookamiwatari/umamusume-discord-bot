@@ -55,7 +55,6 @@ module.exports = class EventChoiceList extends cmd.Command {
 		if (!event_datas_array.flat()) return message.channel.send('イベントが見つかりませんでした');
 
 		event_datas_array.filter((event_datas_array) => event_datas_array.length).map((event_datas) => {
-			console.log('event_datas', event_datas);
 			const emb = new Discord.MessageEmbed()
 				.setTitle(event_datas[0].n)
 				.setDescription(event_datas[0].l)
