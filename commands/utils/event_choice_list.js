@@ -63,7 +63,12 @@ module.exports = class EventChoiceList extends cmd.Command {
 				if (e.e === 'URAファイナルズ準決勝の後に') return;
 				if (e.e === 'URAファイナルズ決勝の後に') return;
 				if (e.e === 'レース入着') return;
+				if (e.e === 'レース勝利') return;
 				if (e.e === 'レース勝利！') return;
+				if (e.e === 'レース勝利(G1)') return;
+				if (e.e === 'レース勝利(G2)') return;
+				if (e.e === 'レース勝利(G3)') return;
+				if (e.e === 'レース勝利(OP)') return;
 				if (e.e === 'レース敗北') return;
 				if (e.e === '追加の自主トレ') return;
 				if (e.e.match(/の後に$/)) return;
