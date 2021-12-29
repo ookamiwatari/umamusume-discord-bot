@@ -3,10 +3,15 @@ const path = require('path');
 
 const vm = require("vm");
 const https = require('https');
-const req = https.request('https://gamewith-tool.s3-ap-northeast-1.amazonaws.com/uma-musume/uma_event_datas.js', (res) => {
+const req = https.request('https://gamewith-tool.s3-ap-northeast-1.amazonaws.com/uma-musume/female_event_datas.js', (res) => {
 	const data = [];
 	res.on('data', (chunk) => { data.push(chunk) });
-	res.on('end', () => { new vm.Script(Buffer.concat(data)).runInThisContext(); start(); });
+	res.on('end', () => {
+		const buffer = Buffer.concat(data);
+		const str = buffer.toString().replace('window.eventDatas[\'女\']', 'const eventDatas');
+		new vm.Script(Buffer.from(str)).runInThisContext();
+		start();
+	});
 });
 req.end();
 
